@@ -26,7 +26,7 @@ pipeline {
             sh 'docker tag imageversion 122610487902.dkr.ecr.us-east-1.amazonaws.com/jenkins-ci:v1.$BUILD_NUMBER'
         }
         }
-    }  
+     
         stage('pushImage'){
             steps{
             sh 'docker push 122610487902.dkr.ecr.us-east-1.amazonaws.com/jenkins-ci:latest'
@@ -35,4 +35,5 @@ pipeline {
         
     }
 
- }
+  } 
+}  
